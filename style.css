@@ -1,0 +1,202 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    color: #1a73e8;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Estilos actualizados para el contenedor de la cámara */
+.webcam-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem; /* Añade margen inferior para separarlo del botón */
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+    transition: transform 0.2s ease; /* Efecto de hover */
+}
+
+.webcam-container:hover {
+    transform: scale(1.01); /* Ampliar ligeramente al pasar el cursor */
+}
+
+.webcam-container video,
+.webcam-container canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+/* Sistema de pestañas */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.tab-button.active {
+    background: #1a73e8;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    width: 100%;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.model-info {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+}
+
+.model-info h2 {
+    color: #1a73e8;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.model-info h3 {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+.model-info ul,
+.model-info ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.model-info li {
+    margin-bottom: 0.4rem;
+}
+
+.model-info a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.model-info .tip {
+    background: #e8f9fe;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #1a73e8;
+    font-style: italic;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.model-info .tip img {
+    width: 20px;
+    height: 20px;
+    filter: invert(44%) sepia(73%) saturate(298%) hue-rotate(15deg) brightness(94%) contrast(87%);
+}
+
+.controls button {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.controls button:hover {
+    background: #155ea0;
+}
+
+.predictions {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.predictions div {
+    padding: 0.6rem;
+    background: #e8f0fe;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.predictions div:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}

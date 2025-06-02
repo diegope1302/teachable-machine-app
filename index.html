@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachable Machine - Estilo LGTV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Teachable Machine Image Model</h1>
+        </header>
+
+        <main>
+            <!-- Pestañas -->
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('camera')">Cámara</button>
+                <button class="tab-button" onclick="showTab('info')">Información</button>
+            </div>
+
+            <!-- Contenido de las pestañas -->
+            <div id="camera" class="tab-content active">
+                <div class="webcam-container" id="webcam-container"></div>
+                
+                <div class="controls">
+                    <button id="start-button" onclick="init()">▶ Iniciar Cámara</button>
+                </div>
+                
+                <div class="predictions" id="label-container"></div>
+            </div>
+
+            <div id="info" class="tab-content">
+                <section class="model-info">
+                    <h2>¿Qué hace este modelo?</h2>
+                    <p>Este modelo utiliza aprendizaje automático para identificar objetos o patrones en tiempo real a través de tu cámara web. Puedes usarlo para:</p>
+                    <ul>
+                        <li>Reconocer gestos o poses</li>
+                        <li>Detectar objetos específicos (ej: manos, rostros, juguetes)</li>
+                        <li>Crear experiencias interactivas con IA</li>
+                    </ul>
+                    <h3>¿Cómo se entrena?</h3>
+                    <ol>
+                        <li>En <a href="https://teachablemachine.withgoogle.com" target="_blank">Teachable Machine</a>, cargas imágenes de ejemplo para cada clase.</li>
+                        <li>El modelo aprende patrones visuales únicos de esas imágenes.</li>
+                        <li>Se exporta y se integra aquí para usarlo en tiempo real.</li>
+                    </ol>
+                    <div class="tip">
+                        <img src="https://i.ibb.co/6FqYQ5j/lightbulb.png" alt="💡" width="20">
+                        <p>Para mejores resultados, entrena el modelo con imágenes variadas y bien iluminadas.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Modelo de Inteligencia Artificial - Google Creative Lab</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
