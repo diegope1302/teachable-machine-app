@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Reconocimiento de Gestos con Teachable Machine
 
 ## Descripción
@@ -25,3 +26,7 @@ Este proyecto implementa un modelo de Machine Learning entrenado en Teachable Ma
 
 ## Licencia
 Este proyecto está bajo la licencia MIT.
+=======
+# teachable-machine-app
+Interfaz web para modelo de IA con Teachable Machine
+>>>>>>> 67ea9a264639d14a07a23d0d093ef627b7d038d2
